@@ -6,6 +6,13 @@ import { UserComponent } from './components/user/user.component';
 import { DataService } from './services/data.service';
 import { HttpModule } from '@angular/http';
 import { AboutComponent } from './components/about/about.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path:'', component:UserComponent},
+  {path:'about', component:AboutComponent}
+];
+
 
 @NgModule({
   declarations: [
@@ -17,6 +24,7 @@ import { AboutComponent } from './components/about/about.component';
     HttpModule,
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
