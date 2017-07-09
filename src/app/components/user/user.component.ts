@@ -6,6 +6,7 @@ import { DataService } from '../../services/data.service';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
+
 export class UserComponent implements OnInit {
   name:string = 'Steve Smith';
   age:number;
